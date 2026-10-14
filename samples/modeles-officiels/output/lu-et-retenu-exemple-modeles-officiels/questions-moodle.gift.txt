@@ -1,0 +1,47 @@
+// D01 §1 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q1::D’après l’affichage, des propos ou comportements à connotation sexuelle ou sexiste relèvent du harcèlement sexuel lorsqu’ils sont imposés à une personne… {~devant au moins deux témoins ~uniquement pendant les heures de travail ~uniquement par un supérieur hiérarchique =de façon répétée}
+
+// D01 §1 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q2::Plusieurs collègues font chacun une seule remarque de ce type à la même personne, en sachant que d’autres l’ont déjà faite. Que dit l’affichage ? {~Seul le premier auteur peut être concerné ~Il faut que la victime ait porté plainte avant ~Il n’y a rien à signaler puisque chacun n’a parlé qu’une fois =L’infraction peut être constituée, même sans concertation entre eux}
+
+// D01 §2 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q3::Même sans répétition, un acte est assimilé au harcèlement sexuel s’il consiste à user d’une pression d’un certain type pour obtenir un acte de nature sexuelle. Quel adjectif l’affichage emploie-t-il pour cette pression ? (un mot) {=grave}
+
+// D01 §3 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q4::Quelle peine l’affichage indique-t-il pour les faits décrits aux I et II, hors circonstances aggravantes ? {~Cinq ans d’emprisonnement et 75 000 € d’amende =Deux ans d’emprisonnement et 30 000 € d’amende ~Six mois d’emprisonnement et 5 000 € d’amende ~Un avertissement inscrit au dossier}
+
+// D01 §3 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q5::Laquelle de ces situations fait partie de celles qui aggravent les peines selon l’affichage ? {~Les faits sont rapportés par un collègue ~La personne visée travaille à temps partiel =L’auteur abuse de l’autorité que lui confèrent ses fonctions ~Les faits ont lieu pendant une pause}
+
+// D01 §4 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q6::Vous pensez être victime. Quel interlocuteur extérieur à l’entreprise l’affichage donne-t-il avec un numéro de téléphone déjà rempli ? {~La caisse d’allocations familiales ~Le centre des impôts =Le Défenseur des droits ~La chambre de commerce}
+
+// D01 §4 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q7::À partir de combien de salariés l’entreprise doit-elle désigner son propre référent harcèlement sexuel et agissements sexistes, d’après l’affichage ? (un nombre en chiffres) {=250}
+
+// D01 §5 – source : modele-affichage-harcelement-sexuel.pdf, p. 1
+::Q8::Pour un manquement de l’employeur à ses obligations, quelle juridiction l’affichage indique-t-il ? {~La Cour des comptes ~Le tribunal administratif =Le conseil de prud’hommes ~Le tribunal de commerce}
+
+// D02 §1 – source : modele-informations-principales-relation-de-travail.pdf, p. 1
+::Q9::À quoi sert ce document remis au salarié, selon sa première phrase ? {~À remplacer son contrat de travail =À l’informer des règles et conditions essentielles d’exercice de ses fonctions ~À présenter les résultats de l’entreprise ~À recueillir son accord sur le règlement intérieur}
+
+// D02 §2 – source : modele-informations-principales-relation-de-travail.pdf, p. 1
+::Q10::Pendant la période d’essai, pour quelle(s) rupture(s) le document prévoit-il un délai de prévenance ? {~Seulement celle décidée par le salarié =Celle décidée par le salarié comme celle décidée par l’employeur ~Seulement celle décidée par l’employeur ~Aucune \: la période d’essai se rompt sans délai}
+
+// D02 §3 – source : modele-informations-principales-relation-de-travail.pdf, p. 2
+::Q11::Dans la partie « Formation professionnelle », les actions de formation de l’employeur sont présentées comme répondant à quoi de sa part ? (un mot) {=obligation}
+
+// D02 §4 – source : modele-informations-principales-relation-de-travail.pdf, p. 3
+::Q12::Un salarié bénéficie du statut protecteur au titre d’un mandat. Que faut-il avant de rompre son contrat, d’après le document ? {~L’accord écrit de ses collègues ~Un simple courriel au salarié ~L’avis du médecin du travail =L’autorisation préalable de l’inspecteur du travail}
+
+// D02 §5 – source : modele-informations-principales-relation-de-travail.pdf, p. 3
+::Q13::Lequel de ces documents l’employeur doit-il remettre au salarié à la fin du contrat, d’après le document ? {~Le compte rendu de l’entretien annuel ~Le registre unique du personnel ~Un exemplaire signé du règlement intérieur =Le certificat de travail}
+
+// D02 §6 – source : modele-informations-principales-relation-de-travail.pdf, p. 3
+::Q14::De combien de mois le salarié dispose-t-il pour contester devant la juridiction prud’homale la fin de son contrat ? (un mot, en lettres) {=douze}
+
+// D02 §7 – source : modele-informations-principales-relation-de-travail.pdf, p. 4
+::Q15::Dans la partie « Rémunération », comment les éléments qui composent la rémunération doivent-ils figurer ? {~En un seul montant global ~Seulement si le salarié le demande =Chacun séparément ~Uniquement en net, après cotisations}
+
+// D02 §8 – source : modele-informations-principales-relation-de-travail.pdf, p. 5
+::Q16::Que vous apprend la partie « Protection sociale » ? {~Le montant de votre future retraite ~La liste des jours fériés de l’année ~Le nom de votre médecin traitant =Les régimes obligatoires auxquels vous êtes affilié}

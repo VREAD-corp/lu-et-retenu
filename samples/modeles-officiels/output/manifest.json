@@ -1,0 +1,20 @@
+{
+  "order_id": "exemple-modeles-officiels",
+  "zip": "lu-et-retenu-exemple-modeles-officiels.zip",
+  "sha256": "d568150097a8de436e3209d62e34fb8a91a3419cf8524f9bf3388e6a1e415e4c",
+  "files": [
+    "00-lisez-moi.pdf",
+    "1-questionnaire-de-lecture.docx",
+    "1-questionnaire-de-lecture.pdf",
+    "2-corrige-et-passages-cites.docx",
+    "2-corrige-et-passages-cites.pdf",
+    "3-attestation-lecture-comprehension.docx",
+    "3-attestation-lecture-comprehension.pdf",
+    "4-registre.csv",
+    "4-registre.xlsx",
+    "5-modele-note-information.docx",
+    "5-modele-note-information.pdf",
+    "questions-moodle.gift.txt",
+    "questions-outil-quiz.csv"
+  ]
+}

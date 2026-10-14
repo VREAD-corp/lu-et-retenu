@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commander – Lu et Retenu, par READ FRANCE (vente aux professionnels)</title>
+<meta name="description" content="Commande d’un questionnaire de lecture : 149 € net, ou 59 € pour les clients d’Acquimètre. Paiement par carte avec Stripe.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Lu et Retenu">
+<meta property="og:title" content="Commander – Lu et Retenu, par READ FRANCE (vente aux professionnels)">
+<meta property="og:description" content="Commande d’un questionnaire de lecture : 149 € net, ou 59 € pour les clients d’Acquimètre. Paiement par carte avec Stripe.">
+<meta property="og:url" content="https://outils.vread.fr/lu-et-retenu/commander.html">
+<meta name="theme-color" content="#7a3e1d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://js.stripe.com https://*.js.stripe.com; frame-src https://js.stripe.com https://*.js.stripe.com https://hooks.stripe.com https://link.com https://*.link.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://api.stripe.com https://link.com https://*.link.com; img-src 'self' data: https://*.stripe.com https://*.link.com; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<script src="xp.js"></script>
+<script src="cro.js" data-site="lu-et-retenu" data-api="https://script.google.com/macros/s/AKfycbzD1IRL8QALluKGZxgGiORFP6-DkC_qFJYR9aOxZiimxa06nbCqpzUI-9iLblp6V2VY/exec" data-hosts="outils.vread.fr" data-cta="a[href*='commander'],#pay-button,#upload-done"></script>
+<script src="mesure.js" defer></script>
+<script src="cro-goals.js" defer></script>
+
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="favicon.svg" width="28" height="28" alt="">Lu et Retenu<span class="endorse">par READ FRANCE</span></a>
+  <nav class="main" aria-label="Navigation principale"><a href="./#exemple">Exemple</a><a href="./#prix">Prix</a><a href="./#questions">Questions</a><a href="commander.html">Commander</a></nav>
+</div></header>
+<main id="main">
+<section class="wrap" aria-labelledby="commander-h">
+<h1 id="commander-h">Commander un questionnaire Lu et Retenu</h1>
+<p>Questionnaire de lecture, corrigé, attestation et registre, rédigés à partir de 1 à 3 de vos documents (60 pages en tout). Vente réservée aux professionnels (SIREN obligatoire). Après le paiement, vous recevez la facture et le lien d’envoi de vos documents ; la livraison a lieu sous 5 jours ouvrés après votre envoi complet.</p>
+<form id="octave-pay" class="checkout-form card" novalidate>
+  <fieldset class="field-group"><legend>Tarif</legend>
+    <label class="offer-choice"><input type="radio" name="product" value="lu-et-retenu-149" checked><span><strong>Tarif standard</strong> : <span data-price-for="lu-et-retenu-149">149 € net (TVA non applicable, art. 293 B du CGI)</span></span></label>
+    <label class="offer-choice"><input type="radio" name="product" value="lu-et-retenu-acquimetre-59"><span><strong>Clients d’Acquimètre</strong> : <span data-price-for="lu-et-retenu-acquimetre-59">59 € net (TVA non applicable, art. 293 B du CGI)</span></span></label>
+    <p class="small muted">Prix retenu : <span id="product-price">149 € net (TVA non applicable, art. 293 B du CGI)</span></p>
+  </fieldset>
+  <div id="acq-proof" class="field-group" hidden>
+    <label class="field"><span>Référence de votre commande Acquimètre (facultatif, commence par ok_)</span>
+      <input type="text" name="acqOrder" data-octave-extra maxlength="40" autocomplete="off" spellcheck="false"></label>
+    <label class="check"><input type="checkbox" name="acqDeclared" data-octave-extra="bool"><span>Sans référence : je déclare que l’entreprise ci-dessous a déjà commandé Acquimètre. En cas de déclaration inexacte, la différence de 90 € pourra être facturée (CGV, article 4).</span></label>
+  </div>
+  <label class="field"><span>Nombre de documents à traiter (1 à 3)</span>
+    <input type="number" name="courses" data-octave-extra min="1" max="3" step="1" value="2" required></label>
+  <label class="field"><span>E-mail professionnel (facture, lien d’envoi des documents, livraison)</span>
+    <input type="email" name="email" autocomplete="email" required maxlength="254"></label>
+  <label class="field"><span>Raison sociale</span>
+    <input type="text" name="company" autocomplete="organization" required minlength="2" maxlength="200"></label>
+  <label class="field"><span>SIREN (9 chiffres)</span>
+    <input type="text" name="siren" inputmode="numeric" required pattern="\s*(\d\s*){9}" maxlength="11" aria-describedby="siren-help"></label>
+  <p id="siren-help" class="small muted">Le numéro est contrôlé (clé de Luhn) avant tout paiement.</p>
+  <fieldset class="field-group"><legend>Adresse de facturation (figure sur la facture)</legend>
+    <label class="field"><span>Adresse</span>
+      <input type="text" name="addressLine1" autocomplete="address-line1" required minlength="3" maxlength="200"></label>
+    <label class="field"><span>Complément d’adresse (facultatif)</span>
+      <input type="text" name="addressLine2" autocomplete="address-line2" maxlength="200"></label>
+    <label class="field"><span>Code postal</span>
+      <input type="text" name="postalCode" autocomplete="postal-code" inputmode="numeric" required pattern="\s*\d{5}\s*" maxlength="7"></label>
+    <label class="field"><span>Ville</span>
+      <input type="text" name="city" autocomplete="address-level2" required maxlength="100"></label>
+    <p class="small muted">Pays : France.</p>
+  </fieldset>
+  <label class="check"><input type="checkbox" name="rightsAttested" data-octave-extra="bool" required>
+    <span>J’atteste que l’entreprise peut nous transmettre ces documents pour qu’ils soient traités, et qu’ils ne contiendront pas de données personnelles de salariés ou de stagiaires (noms, résultats, coordonnées). Je sais que le service ne vérifie pas la conformité juridique des documents.</span></label>
+  <label class="check"><input type="checkbox" name="terms" required>
+    <span>Je commande au nom et pour le compte de l’entreprise ci-dessus, pour un usage professionnel, et j’accepte les <a id="terms-link" href="cgv-pro.html" target="_blank" rel="noopener">conditions générales de vente aux professionnels</a> (version du 14 octobre 2026).</span></label>
+  <p id="payment-loading" class="small muted" role="status">Chargement du paiement sécurisé…</p>
+  <div id="payment-element"></div>
+  <p id="pay-error" class="status err" role="alert" hidden></p>
+  <button type="submit" id="pay-button" class="pay-button" disabled>Payer 149 € et recevoir le lien d’envoi</button>
+  <p class="small muted">Paiement sécurisé par carte bancaire avec Stripe : vos données de carte sont saisies dans un cadre Stripe et ne transitent pas par nos serveurs.</p>
+  <noscript><p class="status err">Le paiement nécessite JavaScript.</p></noscript>
+</form>
+</section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p><strong>Lu et Retenu, par READ FRANCE</strong> : questionnaires de lecture tirés de vos documents d’accueil, une activité de READ FRANCE, l’éditeur de Vread. READ FRANCE SAS (SIREN 988 741 773), 11 rue Rouvet, 75019 Paris. Contact : <a href="mailto:octave@vread.fr">octave@vread.fr</a>.</p>
+  <p class="foot-links"><a href="mentions-legales.html">Mentions légales</a><a href="cgv-pro.html">CGV professionnels</a><a href="confidentialite.html">Confidentialité</a><a href="https://outils.vread.fr/acquimetre/">Acquimètre</a></p>
+  <p class="small">Ce service ne donne pas de conseil juridique. Les textes de loi cités sont ceux du Code du travail numérique (code.travail.gouv.fr), consultés le 14 octobre 2026.</p>
+</div></footer>
+<script src="checkout/checkout-config.js"></script>
+<script src="checkout/commander-xp.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="checkout/commander-extra.js"></script>
+<script src="checkout/pay.js"></script>
+</body>
+</html>

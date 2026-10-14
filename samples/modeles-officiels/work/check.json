@@ -1,0 +1,419 @@
+{
+ "ok": true,
+ "items": [
+  {
+   "doc": 1,
+   "section": 1,
+   "type": "mcq",
+   "question": "D’après l’affichage, des propos ou comportements à connotation sexuelle ou sexiste relèvent du harcèlement sexuel lorsqu’ils sont imposés à une personne…",
+   "answer": "de façon répétée",
+   "choices": [
+    "de façon répétée",
+    "uniquement par un supérieur hiérarchique",
+    "uniquement pendant les heures de travail",
+    "devant au moins deux témoins"
+   ],
+   "source_quote": "Le harcèlement sexuel est le fait d'imposer à une personne, de façon répétée, des propos ou comportements à connotation sexuelle ou sexiste",
+   "explanation": "Relire le I : la répétition, ou l’atteinte à la dignité, ou la situation intimidante, hostile ou offensante.",
+   "id": "Q1",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 1,
+   "type": "mcq",
+   "question": "Plusieurs collègues font chacun une seule remarque de ce type à la même personne, en sachant que d’autres l’ont déjà faite. Que dit l’affichage ?",
+   "answer": "L’infraction peut être constituée, même sans concertation entre eux",
+   "choices": [
+    "L’infraction peut être constituée, même sans concertation entre eux",
+    "Il n’y a rien à signaler puisque chacun n’a parlé qu’une fois",
+    "Seul le premier auteur peut être concerné",
+    "Il faut que la victime ait porté plainte avant"
+   ],
+   "source_quote": "par plusieurs personnes qui, même en l'absence de concertation, savent que ces propos ou comportements caractérisent une répétition",
+   "explanation": "Relire le 2° du I : la répétition peut venir de plusieurs personnes.",
+   "id": "Q2",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 2,
+   "type": "word",
+   "question": "Même sans répétition, un acte est assimilé au harcèlement sexuel s’il consiste à user d’une pression d’un certain type pour obtenir un acte de nature sexuelle. Quel adjectif l’affichage emploie-t-il pour cette pression ? (un mot)",
+   "answer": "grave",
+   "source_quote": "Est assimilé au harcèlement sexuel le fait, même non répété, d'user de toute forme de pression grave dans le but réel ou apparent d'obtenir un acte de nature sexuelle",
+   "explanation": "Relire le II : un seul acte suffit dans ce cas.",
+   "id": "Q3",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": true,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 3,
+   "type": "mcq",
+   "question": "Quelle peine l’affichage indique-t-il pour les faits décrits aux I et II, hors circonstances aggravantes ?",
+   "answer": "Deux ans d’emprisonnement et 30 000 € d’amende",
+   "choices": [
+    "Deux ans d’emprisonnement et 30 000 € d’amende",
+    "Six mois d’emprisonnement et 5 000 € d’amende",
+    "Un avertissement inscrit au dossier",
+    "Cinq ans d’emprisonnement et 75 000 € d’amende"
+   ],
+   "source_quote": "Les faits mentionnés aux I et II sont punis de deux ans d'emprisonnement et de 30 000 € d'amende.",
+   "explanation": "Relire le III, premier alinéa.",
+   "id": "Q4",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 3,
+   "type": "mcq",
+   "question": "Laquelle de ces situations fait partie de celles qui aggravent les peines selon l’affichage ?",
+   "answer": "L’auteur abuse de l’autorité que lui confèrent ses fonctions",
+   "choices": [
+    "L’auteur abuse de l’autorité que lui confèrent ses fonctions",
+    "Les faits ont lieu pendant une pause",
+    "La personne visée travaille à temps partiel",
+    "Les faits sont rapportés par un collègue"
+   ],
+   "source_quote": "Par une personne qui abuse de l'autorité que lui confèrent ses fonctions",
+   "explanation": "Relire la liste des huit circonstances qui portent la peine à trois ans et 45 000 €.",
+   "id": "Q5",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 4,
+   "type": "mcq",
+   "question": "Vous pensez être victime. Quel interlocuteur extérieur à l’entreprise l’affichage donne-t-il avec un numéro de téléphone déjà rempli ?",
+   "answer": "Le Défenseur des droits",
+   "choices": [
+    "Le Défenseur des droits",
+    "La caisse d’allocations familiales",
+    "Le centre des impôts",
+    "La chambre de commerce"
+   ],
+   "source_quote": "Le Défenseur des droits: 09.69.39.00.00",
+   "explanation": "Les autres contacts (médecin du travail, inspection du travail, référents) sont à compléter par l’employeur sur l’affiche.",
+   "id": "Q6",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 4,
+   "type": "word",
+   "question": "À partir de combien de salariés l’entreprise doit-elle désigner son propre référent harcèlement sexuel et agissements sexistes, d’après l’affichage ? (un nombre en chiffres)",
+   "answer": "250",
+   "source_quote": "Obligation pour les entreprises d’au moins 250 salariés",
+   "explanation": "Le référent du CSE existe, lui, dès que l’entreprise a un CSE.",
+   "id": "Q7",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": true,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 1,
+   "section": 5,
+   "type": "mcq",
+   "question": "Pour un manquement de l’employeur à ses obligations, quelle juridiction l’affichage indique-t-il ?",
+   "answer": "Le conseil de prud’hommes",
+   "choices": [
+    "Le conseil de prud’hommes",
+    "Le tribunal de commerce",
+    "La Cour des comptes",
+    "Le tribunal administratif"
+   ],
+   "source_quote": "Saisir le Conseil des prud’hommes pour manquement de l’employeur à ses obligations",
+   "explanation": "La plainte contre l’auteur, elle, se dépose au commissariat, à la gendarmerie ou auprès du procureur.",
+   "id": "Q8",
+   "source": {
+    "file": "D01/modele-affichage-harcelement-sexuel.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 1,
+   "type": "mcq",
+   "question": "À quoi sert ce document remis au salarié, selon sa première phrase ?",
+   "answer": "À l’informer des règles et conditions essentielles d’exercice de ses fonctions",
+   "choices": [
+    "À l’informer des règles et conditions essentielles d’exercice de ses fonctions",
+    "À remplacer son contrat de travail",
+    "À présenter les résultats de l’entreprise",
+    "À recueillir son accord sur le règlement intérieur"
+   ],
+   "source_quote": "Le présent document vous est remis pour vous informer des règles et conditions essentielles d'exercice de vos fonctions",
+   "explanation": "Il informe ; il ne remplace pas le contrat.",
+   "id": "Q9",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 2,
+   "type": "mcq",
+   "question": "Pendant la période d’essai, pour quelle(s) rupture(s) le document prévoit-il un délai de prévenance ?",
+   "answer": "Celle décidée par le salarié comme celle décidée par l’employeur",
+   "choices": [
+    "Celle décidée par le salarié comme celle décidée par l’employeur",
+    "Seulement celle décidée par l’employeur",
+    "Seulement celle décidée par le salarié",
+    "Aucune : la période d’essai se rompt sans délai"
+   ],
+   "source_quote": "Délai de prévenance en cas de rupture du contrat à l'initiative du salarié",
+   "explanation": "Relire la fin du VII : deux délais, un par partie (pages 1 et 2).",
+   "id": "Q10",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 1"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 3,
+   "type": "word",
+   "question": "Dans la partie « Formation professionnelle », les actions de formation de l’employeur sont présentées comme répondant à quoi de sa part ? (un mot)",
+   "answer": "obligation",
+   "source_quote": "Actions mises en œuvre ou prévues par l'employeur au titre de son obligation en matière de formation",
+   "explanation": "Relire le VIII : l’employeur y liste les actions prévues.",
+   "id": "Q11",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 2"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": true,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 4,
+   "type": "mcq",
+   "question": "Un salarié bénéficie du statut protecteur au titre d’un mandat. Que faut-il avant de rompre son contrat, d’après le document ?",
+   "answer": "L’autorisation préalable de l’inspecteur du travail",
+   "choices": [
+    "L’autorisation préalable de l’inspecteur du travail",
+    "L’accord écrit de ses collègues",
+    "Un simple courriel au salarié",
+    "L’avis du médecin du travail"
+   ],
+   "source_quote": "est soumise à l’autorisation préalable de l’inspecteur du travail",
+   "explanation": "Relire les paragraphes sur les mandats internes et externes (X).",
+   "id": "Q12",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 3"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 5,
+   "type": "mcq",
+   "question": "Lequel de ces documents l’employeur doit-il remettre au salarié à la fin du contrat, d’après le document ?",
+   "answer": "Le certificat de travail",
+   "choices": [
+    "Le certificat de travail",
+    "Le compte rendu de l’entretien annuel",
+    "Le registre unique du personnel",
+    "Un exemplaire signé du règlement intérieur"
+   ],
+   "source_quote": "Documents de fin de contrat que doit remettre l'employeur au salarié lors de la rupture du contrat : certificat de travail",
+   "explanation": "Les trois documents : certificat de travail, reçu pour solde de tout compte, attestation d’assurance chômage.",
+   "id": "Q13",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 3"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 6,
+   "type": "word",
+   "question": "De combien de mois le salarié dispose-t-il pour contester devant la juridiction prud’homale la fin de son contrat ? (un mot, en lettres)",
+   "answer": "douze",
+   "source_quote": "dispose d'un délai de douze mois à compter de la notification de la rupture du contrat de travail",
+   "explanation": "Le délai part de la notification de la rupture.",
+   "id": "Q14",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 3"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": true,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 7,
+   "type": "mcq",
+   "question": "Dans la partie « Rémunération », comment les éléments qui composent la rémunération doivent-ils figurer ?",
+   "answer": "Chacun séparément",
+   "choices": [
+    "Chacun séparément",
+    "En un seul montant global",
+    "Uniquement en net, après cotisations",
+    "Seulement si le salarié le demande"
+   ],
+   "source_quote": "Éléments constitutifs de la rémunération à indiquer séparément",
+   "explanation": "Salaire de base, avantages en nature, primes, majorations : chaque élément a sa ligne.",
+   "id": "Q15",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 4"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  },
+  {
+   "doc": 2,
+   "section": 8,
+   "type": "mcq",
+   "question": "Que vous apprend la partie « Protection sociale » ?",
+   "answer": "Les régimes obligatoires auxquels vous êtes affilié",
+   "choices": [
+    "Les régimes obligatoires auxquels vous êtes affilié",
+    "Le nom de votre médecin traitant",
+    "Le montant de votre future retraite",
+    "La liste des jours fériés de l’année"
+   ],
+   "source_quote": "Régimes obligatoires auxquels est affilié le salarié",
+   "explanation": "Relire le XIV : régime de base, chômage, retraite complémentaire, protection sociale complémentaire.",
+   "id": "Q16",
+   "source": {
+    "file": "D02/modele-informations-principales-relation-de-travail.pdf",
+    "place": "p. 5"
+   },
+   "gates": {
+    "schema": true,
+    "quoteFound": true,
+    "answerPresent": null,
+    "duplicateOf": null
+   },
+   "problems": []
+  }
+ ],
+ "problems": [],
+ "counts": {
+  "items": 16,
+  "documents": 2,
+  "sections": 13
+ }
+}

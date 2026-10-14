@@ -1,0 +1,10 @@
+{
+  "order_id": "exemple-modeles-officiels",
+  "company": "Exemple (modèles officiels du Code du travail numérique)",
+  "courses": 2,
+  "sample": true,
+  "files": [
+    { "course": 1, "course_title": "Affichage obligatoire : lutte contre le harcèlement sexuel", "file": "D01/modele-affichage-harcelement-sexuel.pdf" },
+    { "course": 2, "course_title": "Informations principales relatives à la relation de travail", "file": "D02/modele-informations-principales-relation-de-travail.pdf" }
+  ]
+}

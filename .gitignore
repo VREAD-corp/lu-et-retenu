@@ -1,0 +1,5 @@
+node_modules/
+samples/*/output/_md/
+samples/*/output/_docx/
+samples/*/output/_pdf/
+test-results/

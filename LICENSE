@@ -1,0 +1,29 @@
+Code (scripts/, engine/, site/*.mjs, site/assets/*.js, site/assets/styles.css): MIT License
+
+Copyright (c) 2026 READ FRANCE SAS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Texts of the site (site/content.mjs, site/legal.mjs and the built pages): all rights reserved, READ FRANCE SAS.
+
+samples/modeles-officiels/source and input (the two source documents): ministère du Travail, Code du travail numérique
+(https://code.travail.gouv.fr), « Modèle – Affichage obligatoire relatif au harcèlement sexuel » and « Modèle –
+Informations principales relatives à la relation de travail délivrées au salarié », reused under the Licence Ouverte
+etalab 2.0 (https://www.etalab.gouv.fr/licence-ouverte-open-licence/), unmodified (DOCX as downloaded on 2026-10-14,
+plus a PDF conversion). The questions, keys, attestation and other files of the sample: READ FRANCE SAS.
+
+Third-party code: engine/lib/ and engine/md2docx.mjs come from READ FRANCE SAS repositories (acquiz,
+qualiopi-kit-content; see each file header). site/checkout/pay.js and order.js are verbatim copies of
+VREAD-corp/octave-checkout gas/web/. npm dependencies keep their own licences (MIT, BSD-2-Clause for mammoth,
+jszip used under MIT).
