@@ -3,7 +3,7 @@
 // SECTION of one of the customer's documents (one question per section, at least) instead of a course objective.
 import { z } from "zod";
 
-import { buildWordSet, normalizeAnswerForPresence } from "../ai/answer-presence";
+import { buildWordSet, normalizeAnswerForPresence } from "@read-france/reading-engine";
 
 export const QuestionSchema = z.object({
   doc: z.number().int().min(1).max(3),

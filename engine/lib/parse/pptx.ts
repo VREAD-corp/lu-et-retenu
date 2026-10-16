@@ -2,7 +2,7 @@
 // READ FRANCE SAS): acquiz only read PDF and DOCX. A .pptx is a ZIP of XML parts; the text runs are <a:t> elements.
 import JSZip from "jszip";
 
-import { normalizeExtractedText } from "./pdf";
+import { normalizeExtractedText } from "@read-france/reading-engine";
 
 const decode = (s: string) =>
   s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&amp;/g, "&");

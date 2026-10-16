@@ -33,7 +33,9 @@ A READ FRANCE SAS service (venture V4-53 of `octave-asset-ventures`), « une act
    npx tsx engine/cli.ts extract /path/orders/ok_…                  # work/Dxx/extract.txt to read
    #   write work/draft.json: documents with their sections, then 8–20 items (doc, section, question, answer,
    #   choices for an MCQ, verbatim source_quote, explanation = what to re-read when wrong); one question per section at least
-   npx tsx engine/cli.ts check  /path/orders/ok_…                   # acquiz static gates; any failure stops
+   npx tsx engine/cli.ts cold   /path/orders/ok_…                   # cold-answer prompts (document title + question only)
+   #   an agent that has NOT seen the documents answers work/cold.answers.jsonl; then `judge` for the MC answers
+   npx tsx engine/cli.ts check  /path/orders/ok_…                   # reading-engine gates; any failure stops
    npx tsx engine/cli.ts render /path/orders/ok_…                   # DOCX + PDF + XLSX + CSV + GIFT -> output/lu-et-retenu-ok_….zip
    node gas/scripts/eval-ops.mjs deliver ok_… /path/orders/ok_…/output/lu-et-retenu-ok_….zip "summary"
    ```
@@ -42,9 +44,12 @@ A READ FRANCE SAS service (venture V4-53 of `octave-asset-ventures`), « une act
 
 ## Engine (`engine/`)
 
-- Text extraction and the static gates come from the in-house parts of `VREAD-corp/acquiz` (`engine/lib/`): PDF/DOCX/PPTX
-  parsing, quote check, answer presence, duplicates, item rules (one-word answers, exactly one right option).
-  Lu et Retenu adds the coverage rule (every section of every document has a question) and the 8–20 size rule.
+- Text extraction and the gates come from **READ FRANCE's reading engine** (`@read-france/reading-engine`,
+  VREAD-corp/vread-reading-engine, a git dependency pinned to a commit): the in-house parsers, segmenter and QA gates
+  of vread-workflow-def (pre-Octave snapshot `a5df9a9`), including the **cold-answer gate** now run on every order
+  (`engine/qa.ts`, see [qa/README.md](qa/README.md)). It replaced, on 2026-10-16, the copy vendored from
+  `VREAD-corp/acquiz`; item rules (`engine/lib/gen/schema.ts`) and PPTX extraction stay local. Lu et Retenu adds the
+  coverage rule (every section of every document has a question) and the 8–20 size rule.
 - Deliverable per order: `1-questionnaire-de-lecture` (to hand out), `2-corrige-et-passages-cites` (answer, page and quoted
   passage, what to re-read), `3-attestation-lecture-comprehension` (one per person, signed by the person and the
   organisation), `4-registre.xlsx/.csv`, `questions-outil-quiz.csv` (Google Forms or any quiz tool),

@@ -1,12 +1,20 @@
 // Adapted from VREAD-corp/acquiz@cdba4c0 src/lib/parse/index.ts (Octave/Vin-CC for READ FRANCE SAS).
+// Since 2026-10-16 the PDF/DOCX extraction and the segmenter come from @read-france/reading-engine (VREAD-corp/
+// vread-reading-engine, pinned in package.json) instead of the copies vendored from acquiz; PPTX stays local.
 // Changes: PPTX support (pptx.ts), and every file keeps its "places" (PDF pages, PPTX slides, DOCX = whole
 // document) so that each question can cite where its source passage is (« p. 4 », « diapositive 7 »).
 import { createHash } from "node:crypto";
 
-import { parseDocxBuffer } from "./docx";
-import { normalizeExtractedText, parsePdfBuffer, splitGluedCells } from "./pdf";
+import {
+  normalizeExtractedText,
+  parseDocxBuffer,
+  parsePdfPages,
+  parsePdfStructured as parsePdfBuffer,
+  segmentCourse,
+  type SectionSegment as Segment,
+} from "@read-france/reading-engine";
+
 import { parsePptxBuffer } from "./pptx";
-import { segmentCourse, type Segment } from "./segmenter";
 
 export type Place = { label: string; text: string };
 export type ParsedFile = {
@@ -32,26 +40,8 @@ export const detectKind = (filename: string, bytes: Uint8Array): ParsedFile["kin
   throw new Error(`Format non pris en charge (${filename}) : PDF, DOCX, PPTX ou texte.`);
 };
 
-/** One text per PDF page (pdf-parse page callback), with the same cleaning as the whole text. */
-const pdfPages = async (buffer: Uint8Array): Promise<string[]> => {
-  const mod = await import("pdf-parse/lib/pdf-parse.js");
-  const pdfParse = (mod.default ?? mod) as (b: Buffer, o: Record<string, unknown>) => Promise<unknown>;
-  const pages: string[] = [];
-  await pdfParse(Buffer.from(buffer), {
-    pagerender: async (page: { pageIndex: number; getTextContent: (o: Record<string, boolean>) => Promise<{ items: { str: string; transform: number[] }[] }> }) => {
-      const tc = await page.getTextContent({ normalizeWhitespace: false, disableCombineTextItems: false });
-      let lastY: number | undefined;
-      let text = "";
-      for (const item of tc.items) {
-        text += lastY === undefined || lastY === item.transform[5] ? item.str : "\n" + item.str;
-        lastY = item.transform[5];
-      }
-      pages[page.pageIndex] = normalizeExtractedText(splitGluedCells(text));
-      return text;
-    },
-  });
-  return pages.map((p) => p ?? "");
-};
+/** One text per PDF page: the reading engine's `parsePdfPages`. */
+const pdfPages = parsePdfPages;
 
 /** Customer-uploaded documents ONLY: no fetch, search or download path here. */
 export const parseFile = async (filename: string, bytes: Uint8Array, options: { segmentWordCount?: number } = {}): Promise<ParsedFile> => {

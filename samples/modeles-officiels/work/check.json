@@ -5,16 +5,16 @@
    "doc": 1,
    "section": 1,
    "type": "mcq",
-   "question": "D’après l’affichage, des propos ou comportements à connotation sexuelle ou sexiste relèvent du harcèlement sexuel lorsqu’ils sont imposés à une personne…",
-   "answer": "de façon répétée",
+   "question": "Vous vous reconnaissez dans la définition du I et cherchez qui joindre. Pour chaque contact à compléter, qu’est-ce que l’employeur inscrit sur l’affiche ?",
+   "answer": "Un nom et un numéro de téléphone",
    "choices": [
-    "de façon répétée",
-    "uniquement par un supérieur hiérarchique",
-    "uniquement pendant les heures de travail",
-    "devant au moins deux témoins"
+    "Un nom et un numéro de téléphone",
+    "Une adresse postale et des horaires d’accueil",
+    "Une adresse électronique seulement",
+    "Un lien vers un formulaire de signalement en ligne"
    ],
-   "source_quote": "Le harcèlement sexuel est le fait d'imposer à une personne, de façon répétée, des propos ou comportements à connotation sexuelle ou sexiste",
-   "explanation": "Relire le I : la répétition, ou l’atteinte à la dignité, ou la situation intimidante, hostile ou offensante.",
+   "source_quote": "Le médecin du travail / service de santé au travail Nom : ........................................... Tél. :",
+   "explanation": "Sous le médecin du travail, l’inspection du travail et les deux référents, l’affiche laisse deux lignes à remplir : « Nom » et « Tél. ».",
    "id": "Q1",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -24,7 +24,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -51,18 +52,25 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
   {
    "doc": 1,
    "section": 2,
-   "type": "word",
-   "question": "Même sans répétition, un acte est assimilé au harcèlement sexuel s’il consiste à user d’une pression d’un certain type pour obtenir un acte de nature sexuelle. Quel adjectif l’affichage emploie-t-il pour cette pression ? (un mot)",
-   "answer": "grave",
-   "source_quote": "Est assimilé au harcèlement sexuel le fait, même non répété, d'user de toute forme de pression grave dans le but réel ou apparent d'obtenir un acte de nature sexuelle",
-   "explanation": "Relire le II : un seul acte suffit dans ce cas.",
+   "type": "mcq",
+   "question": "Pression grave (II) : vous cherchez qui joindre sur l’affiche. Combien de contacts y ont des lignes « Nom » et « Tél. » à compléter ?",
+   "answer": "Quatre",
+   "choices": [
+    "Quatre",
+    "Trois",
+    "Cinq",
+    "Deux"
+   ],
+   "source_quote": "Pour des renseignements ou être accompagné dans vos démarches, vous pouvez contacter :",
+   "explanation": "Quatre contacts ont des lignes « Nom / Tél. » à remplir par l’employeur : le médecin du travail, l’inspection du travail et les deux référents ; seul le Défenseur des droits a son numéro et son adresse imprimés.",
    "id": "Q3",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -71,8 +79,9 @@
    "gates": {
     "schema": true,
     "quoteFound": true,
-    "answerPresent": true,
-    "duplicateOf": null
+    "answerPresent": null,
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -80,16 +89,16 @@
    "doc": 1,
    "section": 3,
    "type": "mcq",
-   "question": "Quelle peine l’affichage indique-t-il pour les faits décrits aux I et II, hors circonstances aggravantes ?",
-   "answer": "Deux ans d’emprisonnement et 30 000 € d’amende",
+   "question": "Faits aggravés du III : dans la liste « vous pouvez contacter », quel contact l’affiche place-t-elle en dernier, juste avant les démarches en justice ?",
+   "answer": "Le référent harcèlement du CSE",
    "choices": [
-    "Deux ans d’emprisonnement et 30 000 € d’amende",
-    "Six mois d’emprisonnement et 5 000 € d’amende",
-    "Un avertissement inscrit au dossier",
-    "Cinq ans d’emprisonnement et 75 000 € d’amende"
+    "Le référent harcèlement du CSE",
+    "Le référent harcèlement de l’entreprise",
+    "Le Défenseur des droits",
+    "L’inspection du travail"
    ],
-   "source_quote": "Les faits mentionnés aux I et II sont punis de deux ans d'emprisonnement et de 30 000 € d'amende.",
-   "explanation": "Relire le III, premier alinéa.",
+   "source_quote": "Le référent « lutte contre le harcèlement sexuel et les agissements sexistes » du Comité social et économique [Si votre entreprise est doté d’un CSE – article L. 2314-1 du code du travail]",
+   "explanation": "Ordre des contacts : médecin du travail, inspection du travail, Défenseur des droits, référent de l’entreprise, référent du CSE, puis « Pour agir en justice ».",
    "id": "Q4",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -99,7 +108,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -107,16 +117,16 @@
    "doc": 1,
    "section": 3,
    "type": "mcq",
-   "question": "Laquelle de ces situations fait partie de celles qui aggravent les peines selon l’affichage ?",
-   "answer": "L’auteur abuse de l’autorité que lui confèrent ses fonctions",
+   "question": "Un mineur a assisté aux faits (III, 7°) et vous voulez joindre l’inspection du travail. Quelle précision l’affiche donne-t-elle entre crochets à côté ?",
+   "answer": "Agent de contrôle compétent",
    "choices": [
-    "L’auteur abuse de l’autorité que lui confèrent ses fonctions",
-    "Les faits ont lieu pendant une pause",
-    "La personne visée travaille à temps partiel",
-    "Les faits sont rapportés par un collègue"
+    "Agent de contrôle compétent",
+    "Obligation pour les entreprises d’au moins 250 salariés",
+    "Si votre entreprise est dotée d’un CSE",
+    "Inutile d’affranchir"
    ],
-   "source_quote": "Par une personne qui abuse de l'autorité que lui confèrent ses fonctions",
-   "explanation": "Relire la liste des huit circonstances qui portent la peine à trois ans et 45 000 €.",
+   "source_quote": "L’inspection du travail [agent de contrôle compétent] Nom : ........................................... Tél. :",
+   "explanation": "Pour l’inspection du travail, le nom et le téléphone à indiquer sont ceux de l’agent de contrôle compétent pour l’établissement.",
    "id": "Q5",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -126,7 +136,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -134,16 +145,16 @@
    "doc": 1,
    "section": 4,
    "type": "mcq",
-   "question": "Vous pensez être victime. Quel interlocuteur extérieur à l’entreprise l’affichage donne-t-il avec un numéro de téléphone déjà rempli ?",
-   "answer": "Le Défenseur des droits",
+   "question": "Dans la liste « vous pouvez contacter » de l’affiche, quel interlocuteur est cité en premier ?",
+   "answer": "Le médecin du travail / service de santé au travail",
    "choices": [
+    "Le médecin du travail / service de santé au travail",
+    "L’inspection du travail",
     "Le Défenseur des droits",
-    "La caisse d’allocations familiales",
-    "Le centre des impôts",
-    "La chambre de commerce"
+    "Le référent harcèlement du CSE"
    ],
-   "source_quote": "Le Défenseur des droits: 09.69.39.00.00",
-   "explanation": "Les autres contacts (médecin du travail, inspection du travail, référents) sont à compléter par l’employeur sur l’affiche.",
+   "source_quote": "Le médecin du travail / service de santé au travail",
+   "explanation": "Ordre de l’affiche : médecin du travail, inspection du travail, Défenseur des droits, référent de l’entreprise, référent du CSE.",
    "id": "Q6",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -153,7 +164,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -161,10 +173,10 @@
    "doc": 1,
    "section": 4,
    "type": "word",
-   "question": "À partir de combien de salariés l’entreprise doit-elle désigner son propre référent harcèlement sexuel et agissements sexistes, d’après l’affichage ? (un nombre en chiffres)",
-   "answer": "250",
-   "source_quote": "Obligation pour les entreprises d’au moins 250 salariés",
-   "explanation": "Le référent du CSE existe, lui, dès que l’entreprise a un CSE.",
+   "question": "Selon l’affiche, les contacts listés peuvent vous accompagner dans vos démarches, mais aussi vous donner quoi ? (un mot)",
+   "answer": "renseignements|renseignement",
+   "source_quote": "Pour des renseignements ou être accompagné dans vos démarches, vous pouvez contacter :",
+   "explanation": "Relire la phrase qui ouvre la liste : on peut appeler ces contacts pour se renseigner, sans engager de démarche.",
    "id": "Q7",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -174,7 +186,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": true,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -182,16 +195,16 @@
    "doc": 1,
    "section": 5,
    "type": "mcq",
-   "question": "Pour un manquement de l’employeur à ses obligations, quelle juridiction l’affichage indique-t-il ?",
-   "answer": "Le conseil de prud’hommes",
+   "question": "Dans la partie « Pour agir en justice », quelle démarche l’affiche cite-t-elle en premier ?",
+   "answer": "Saisir le conseil de prud’hommes pour manquement de l’employeur",
    "choices": [
-    "Le conseil de prud’hommes",
-    "Le tribunal de commerce",
-    "La Cour des comptes",
-    "Le tribunal administratif"
+    "Saisir le conseil de prud’hommes pour manquement de l’employeur",
+    "Porter plainte au commissariat ou à la gendarmerie",
+    "Écrire au procureur de la République",
+    "Saisir le Défenseur des droits"
    ],
-   "source_quote": "Saisir le Conseil des prud’hommes pour manquement de l’employeur à ses obligations",
-   "explanation": "La plainte contre l’auteur, elle, se dépose au commissariat, à la gendarmerie ou auprès du procureur.",
+   "source_quote": "Pour agir en justice, Vous pouvez : • Saisir le Conseil des prud’hommes pour manquement de l’employeur à ses obligations",
+   "explanation": "L’affiche cite d’abord les prud’hommes, puis la plainte (commissariat, gendarmerie, ou lettre au procureur).",
    "id": "Q8",
    "source": {
     "file": "D01/modele-affichage-harcelement-sexuel.pdf",
@@ -201,7 +214,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -209,16 +223,16 @@
    "doc": 2,
    "section": 1,
    "type": "mcq",
-   "question": "À quoi sert ce document remis au salarié, selon sa première phrase ?",
-   "answer": "À l’informer des règles et conditions essentielles d’exercice de ses fonctions",
+   "question": "Le titre de ce modèle précise entre parenthèses de quel type de document il s’agit. Lequel ?",
+   "answer": "Un document unique",
    "choices": [
-    "À l’informer des règles et conditions essentielles d’exercice de ses fonctions",
-    "À remplacer son contrat de travail",
-    "À présenter les résultats de l’entreprise",
-    "À recueillir son accord sur le règlement intérieur"
+    "Un document unique",
+    "Une annexe au contrat de travail",
+    "Une notice d’information",
+    "Un avenant au contrat"
    ],
-   "source_quote": "Le présent document vous est remis pour vous informer des règles et conditions essentielles d'exercice de vos fonctions",
-   "explanation": "Il informe ; il ne remplace pas le contrat.",
+   "source_quote": "INFORMATIONS PRINCIPALES RELATIVES À LA RELATION DE TRAVAIL DELIVRÉES AU SALARIÉ (document unique)",
+   "explanation": "Relire le titre : toutes les informations sont réunies dans un document unique.",
    "id": "Q9",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
@@ -228,7 +242,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -236,16 +251,16 @@
    "doc": 2,
    "section": 2,
    "type": "mcq",
-   "question": "Pendant la période d’essai, pour quelle(s) rupture(s) le document prévoit-il un délai de prévenance ?",
-   "answer": "Celle décidée par le salarié comme celle décidée par l’employeur",
+   "question": "Dans la partie VII, quel délai de prévenance le modèle fait-il remplir en premier ?",
+   "answer": "Celui de la rupture à l’initiative du salarié",
    "choices": [
-    "Celle décidée par le salarié comme celle décidée par l’employeur",
-    "Seulement celle décidée par l’employeur",
-    "Seulement celle décidée par le salarié",
-    "Aucune : la période d’essai se rompt sans délai"
+    "Celui de la rupture à l’initiative du salarié",
+    "Celui de la rupture à l’initiative de l’employeur",
+    "Celui de la rupture d’un commun accord",
+    "Celui de la rupture pour faute grave"
    ],
    "source_quote": "Délai de prévenance en cas de rupture du contrat à l'initiative du salarié",
-   "explanation": "Relire la fin du VII : deux délais, un par partie (pages 1 et 2).",
+   "explanation": "Relire la fin du VII : délai du salarié (page 1), puis délai de l’employeur (page 2).",
    "id": "Q10",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
@@ -255,7 +270,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -263,10 +279,10 @@
    "doc": 2,
    "section": 3,
    "type": "word",
-   "question": "Dans la partie « Formation professionnelle », les actions de formation de l’employeur sont présentées comme répondant à quoi de sa part ? (un mot)",
-   "answer": "obligation",
-   "source_quote": "Actions mises en œuvre ou prévues par l'employeur au titre de son obligation en matière de formation",
-   "explanation": "Relire le VIII : l’employeur y liste les actions prévues.",
+   "question": "Dans la partie VIII, quelle marque le modèle place-t-il entre guillemets à l’endroit où l’employeur décrit ses actions de formation ? (un mot)",
+   "answer": "XX",
+   "source_quote": "conformément à l'article L. 6321-1 du Code du travail : « XX »",
+   "explanation": "Relire le VIII : « XX » est la case que l’employeur remplit avec ses actions de formation.",
    "id": "Q11",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
@@ -276,7 +292,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": true,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -284,16 +301,16 @@
    "doc": 2,
    "section": 4,
    "type": "mcq",
-   "question": "Un salarié bénéficie du statut protecteur au titre d’un mandat. Que faut-il avant de rompre son contrat, d’après le document ?",
-   "answer": "L’autorisation préalable de l’inspecteur du travail",
+   "question": "Selon le modèle, à quel autre type de mandat s’appliquent aussi les modalités de communication de la procédure adéquate ?",
+   "answer": "Un mandat non visé dans le Code du travail",
    "choices": [
-    "L’autorisation préalable de l’inspecteur du travail",
-    "L’accord écrit de ses collègues",
-    "Un simple courriel au salarié",
-    "L’avis du médecin du travail"
+    "Un mandat non visé dans le Code du travail",
+    "Un mandat exercé depuis plus d’un an",
+    "Un mandat de conseiller municipal",
+    "Un mandat expiré depuis moins de six mois"
    ],
-   "source_quote": "est soumise à l’autorisation préalable de l’inspecteur du travail",
-   "explanation": "Relire les paragraphes sur les mandats internes et externes (X).",
+   "source_quote": "Ces modalités relatives à la communication de la procédure adéquate s’appliquent si le salarié bénéficie du statut protecteur au titre d’un mandat non visé dans le Code du travail.",
+   "explanation": "Relire la fin des paragraphes sur le statut protecteur (X).",
    "id": "Q12",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
@@ -303,7 +320,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -311,16 +329,16 @@
    "doc": 2,
    "section": 5,
    "type": "mcq",
-   "question": "Lequel de ces documents l’employeur doit-il remettre au salarié à la fin du contrat, d’après le document ?",
-   "answer": "Le certificat de travail",
+   "question": "Combien de fois la liste des documents de fin de contrat figure-t-elle dans la partie X du modèle ?",
+   "answer": "Trois fois",
    "choices": [
-    "Le certificat de travail",
-    "Le compte rendu de l’entretien annuel",
-    "Le registre unique du personnel",
-    "Un exemplaire signé du règlement intérieur"
+    "Une fois",
+    "Deux fois",
+    "Trois fois",
+    "Quatre fois"
    ],
-   "source_quote": "Documents de fin de contrat que doit remettre l'employeur au salarié lors de la rupture du contrat : certificat de travail",
-   "explanation": "Les trois documents : certificat de travail, reçu pour solde de tout compte, attestation d’assurance chômage.",
+   "source_quote": "Documents de fin de contrat que doit remettre l'employeur au salarié lors de la rupture du contrat",
+   "explanation": "Elle revient dans chaque option : CDI, CDD et contrat d’apprentissage (pages 3 et 4).",
    "id": "Q13",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
@@ -330,7 +348,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -338,20 +357,21 @@
    "doc": 2,
    "section": 6,
    "type": "word",
-   "question": "De combien de mois le salarié dispose-t-il pour contester devant la juridiction prud’homale la fin de son contrat ? (un mot, en lettres)",
-   "answer": "douze",
-   "source_quote": "dispose d'un délai de douze mois à compter de la notification de la rupture du contrat de travail",
-   "explanation": "Le délai part de la notification de la rupture.",
+   "question": "Dans ce modèle, quel est le numéro de la partie où figure le délai pour contester la rupture devant les prud’hommes ? (un mot)",
+   "answer": "dix|X|10",
+   "source_quote": "X. - Rupture du contrat [Option 1 – Si le salarié est en contrat à durée indéterminée]",
+   "explanation": "Le paragraphe « Recours du salarié » (douze mois à compter de la notification) est dans la partie X, Rupture du contrat, option 1 CDI (page 3) : il n’est pas repris dans les options CDD et apprentissage.",
    "id": "Q14",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
-    "place": "p. 3"
+    "place": "p. 2"
    },
    "gates": {
     "schema": true,
     "quoteFound": true,
     "answerPresent": true,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -359,16 +379,16 @@
    "doc": 2,
    "section": 7,
    "type": "mcq",
-   "question": "Dans la partie « Rémunération », comment les éléments qui composent la rémunération doivent-ils figurer ?",
-   "answer": "Chacun séparément",
+   "question": "Pour la périodicité du versement de la rémunération, à quel salarié l’option 3 du modèle s’adresse-t-elle ?",
+   "answer": "Au salarié en contrat de travail intermittent",
    "choices": [
-    "Chacun séparément",
-    "En un seul montant global",
-    "Uniquement en net, après cotisations",
-    "Seulement si le salarié le demande"
+    "Au salarié en contrat de travail intermittent",
+    "Au salarié non-mensualisé",
+    "Au salarié mensualisé",
+    "Au salarié à temps partiel"
    ],
-   "source_quote": "Éléments constitutifs de la rémunération à indiquer séparément",
-   "explanation": "Salaire de base, avantages en nature, primes, majorations : chaque élément a sa ligne.",
+   "source_quote": "[Option 3 – Le salarié est en contrat de travail intermittent]",
+   "explanation": "Relire le XI : option 1 mensualisé, option 2 non-mensualisé, option 3 contrat intermittent.",
    "id": "Q15",
    "source": {
     "file": "D02/modele-informations-principales-relation-de-travail.pdf",
@@ -378,7 +398,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   },
@@ -405,7 +426,8 @@
     "schema": true,
     "quoteFound": true,
     "answerPresent": null,
-    "duplicateOf": null
+    "duplicateOf": null,
+    "cold": "pass"
    },
    "problems": []
   }

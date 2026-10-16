@@ -1,4 +1,5 @@
-// Engine tests: acquiz static gates on Lu et Retenu drafts, coverage of every section, deterministic option order,
+// Engine tests: the gates of @read-france/reading-engine on Lu et Retenu drafts (quote, answer presence, duplicates,
+// and the cold-answer gate fed by work/cold.answers.jsonl + work/cold.judge.jsonl), coverage of every section, deterministic option order,
 // the public sample (every question passes every gate) and the XLSX register.
 import assert from "node:assert/strict";
 import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
@@ -28,14 +29,15 @@ test("the public sample: 16 questions on 2 official models, every section covere
   assert.deepEqual(r.counts, { items: 16, documents: 2, sections: 13 });
   assert.ok(r.items.every((i) => i.gates.quoteFound && i.source && /^p\. \d+/.test(i.source.place)));
   assert.ok(r.items.filter((i) => i.type === "word").every((i) => i.gates.answerPresent === true));
-  assert.deepEqual(r.items.find((i) => i.answer === "douze")!.source, { file: "D02/modele-informations-principales-relation-de-travail.pdf", place: "p. 3" });
+  assert.ok(r.items.every((i) => i.gates.cold === "pass"), "every question passed the cold-answer gate");
+  assert.deepEqual(r.items.find((i) => i.answer.startsWith("renseignements"))!.source, { file: "D01/modele-affichage-harcelement-sexuel.pdf", place: "p. 1" });
 });
 
 test("gates catch a made-up quote, a quote from the other document, an answer absent from the passage, a duplicate and an uncovered section", () => {
   const { dir, draft } = copySample();
   draft.items[0].source_quote = "Le règlement prévoit une pause café de vingt minutes chaque matin";
   draft.items[8].source_quote = draft.items[3].source_quote; // D02 question citing D01's text
-  draft.items[2].answer = "légère";
+  draft.items[6].answer = "légère";
   draft.items[5] = { ...draft.items[4] };
   draft.items = draft.items.filter((q: { doc: number; section: number }) => !(q.doc === 2 && q.section === 8));
   writeFileSync(join(dir, "work/draft.json"), JSON.stringify(draft));
@@ -44,9 +46,29 @@ test("gates catch a made-up quote, a quote from the other document, an answer ab
   const has = (re: RegExp) => assert.ok(r.problems.some((p) => re.test(p)), `${re} in\n${r.problems.join("\n")}`);
   has(/^Q1 : .*citation introuvable/);
   has(/^Q9 : .*citation introuvable/);
-  has(/^Q3 : .*réponse absente du passage cité/);
+  has(/^Q7 : .*réponse absente du passage cité/);
+  has(/porte cold-answer non passée/); // no cold answers were copied: the gate fails closed
   has(/^Q6 : .*doublon de Q5/);
   has(/D02 section 8 « Protection sociale \(XIV\) » sans question/);
+});
+
+test("cold-answer gate: a question answered right without the document blocks; a rewritten question needs a new answer", () => {
+  const { dir, draft } = copySample();
+  writeFileSync(join(dir, "work/draft.json"), JSON.stringify(draft));
+  const cold = readFileSync(join(SAMPLE, "work/cold.answers.jsonl"), "utf8").trim().split("\n").map((l) => JSON.parse(l));
+  const judge = readFileSync(join(SAMPLE, "work/cold.judge.jsonl"), "utf8");
+  const w = (rows: unknown[]) => writeFileSync(join(dir, "work/cold.answers.jsonl"), rows.map((r) => JSON.stringify(r)).join("\n") + "\n");
+  writeFileSync(join(dir, "work/cold.judge.jsonl"), judge);
+  w(cold);
+  assert.equal(checkOrder(dir).ok, true);
+  // Q7 (word): someone who never read the poster answers it right -> leak.
+  w(cold.map((r) => (r.id === "Q7" ? { ...r, answer: "renseignements" } : r)));
+  assert.ok(checkOrder(dir).problems.some((p) => /^Q7 : .*répondable sans lire le document/.test(p)));
+  // Q7 rewritten: its old answer is stale, the gate is pending again.
+  w(cold);
+  draft.items[6].question = draft.items[6].question.replace("Selon l’affiche", "D’après l’affiche");
+  writeFileSync(join(dir, "work/draft.json"), JSON.stringify(draft));
+  assert.ok(checkOrder(dir).problems.some((p) => /^Q7 : .*porte cold-answer non passée/.test(p)));
 });
 
 test("size rule: fewer than 8 questions is refused by the schema", () => {
