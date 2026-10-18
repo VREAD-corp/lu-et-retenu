@@ -97,11 +97,20 @@ test('pooled test POOLED-READING-01: rd-hero (a/b by tab, home only) in OCTAVE_X
   const fig = html.match(/<figure class="hero-excerpt" data-hero-excerpt>[\s\S]*?<\/figure>/)[0];
   assert.ok(html.indexOf('class="apercu"') < html.indexOf('data-hero-excerpt') && html.indexOf('data-hero-excerpt') < html.indexOf('id="en-bref"'), 'excerpt inside the hero');
   assert.match(css, /html\[data-xp-rd-hero="b"\] \.hero \.apercu\{display:none\}/);
-  assert.match(fig, /href="exemple\/1-questionnaire-de-lecture\.pdf" data-mesure="free_download" data-cta/);
+  assert.match(fig, /href="exemple\/1-questionnaire-de-lecture\.pdf" data-mesure="sample_click" data-cta/);
   // The excerpt is verbatim from the sample's answer key.
   assert.match(fig, /même en l'absence de concertation, savent que ces propos ou comportements caractérisent une répétition/);
   assert.match(read(join(DOCS, 'cro-goals.js')), /goal\('sample'\)/);
   assert.match(html, /data-cta="\[data-cta\],/);
+});
+
+test('POOLED-READING-02: the free example is one click away in the first screen (sample_click), its files send sample_download', () => {
+  const html = read(join(DOCS, 'index.html'));
+  const hero = html.match(/<section class="hero"[\s\S]*?<\/section>/)[0];
+  assert.match(hero, /<div class="ctas">[\s\S]*?href="#exemple" data-mesure="sample_click"[^>]*>Voir l’exemple gratuit<\/a><\/div>/);
+  assert.ok(!/free_download/.test(html), 'no free_download left on the home');
+  const ex = html.match(/<section class="block" id="exemple"[\s\S]*?<\/section>/)[0];
+  assert.ok((ex.match(/data-mesure="sample_download"/g) || []).length >= 4);
 });
 
 test('SEO: FAQPage = visible FAQ (1:1), breadcrumbs on inner pages, about link, sitemap lastmod are real dates', () => {

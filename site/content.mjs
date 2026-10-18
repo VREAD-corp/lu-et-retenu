@@ -70,7 +70,7 @@ function heroExcerpt() {
           <ul class="ex-choices">${choices.map((c) => `<li><span class="ex-box" aria-hidden="true"></span>${c}</li>`).join('')}</ul>
           <p class="ex-key"><strong>Corrigé :</strong> d). « par plusieurs personnes qui, même en l'absence de concertation, savent que ces propos ou comportements caractérisent une répétition » (modele-affichage-harcelement-sexuel.pdf, p. 1). Si la réponse est fausse : Relire le 2° du I : la répétition peut venir de plusieurs personnes.</p>
         </div>
-        <figcaption class="small muted">Extrait réel de l’exemple : question 2 du questionnaire (p. 1) et sa ligne du corrigé (p. 2). <a href="exemple/1-questionnaire-de-lecture.pdf" data-mesure="free_download" data-cta>Ouvrir le questionnaire complet (PDF)</a></figcaption>
+        <figcaption class="small muted">Extrait réel de l’exemple : question 2 du questionnaire (p. 1) et sa ligne du corrigé (p. 2). <a href="exemple/1-questionnaire-de-lecture.pdf" data-mesure="sample_click" data-cta>Ouvrir le questionnaire complet (PDF)</a></figcaption>
       </figure>`;
 }
 
@@ -86,11 +86,12 @@ export function homeBody(p) {
     <div>
       <p class="kicker">Règlement intérieur, livret d’accueil, consignes de sécurité</p>
       <h1>Un questionnaire de lecture tiré de vos propres documents d’accueil</h1>
-      <p class="lead">Vous nous envoyez jusqu’à 3 documents (60 pages en tout). Sous 5 jours ouvrés, vous recevez un questionnaire de 8 à 20 questions, une par section, chacune reliée au passage dont elle vient, avec le corrigé et une attestation de lecture à faire signer. Vous le remettez vous-même, sur papier ou dans votre outil : nous ne voyons aucune réponse.</p>
-      <div class="ctas">${cta}<a class="btn btn-ghost" href="#exemple">Voir l’exemple complet</a></div>
+      <p class="lead">Vous nous envoyez jusqu’à 3 documents (60 pages en tout). Sous 5 jours ouvrés, vous recevez un questionnaire de 8 à 20 questions, avec le corrigé et une attestation de lecture à faire signer.</p>
+      <div class="ctas">${cta}<a class="btn btn-ghost" href="#exemple" data-mesure="sample_click" data-cta>Voir l’exemple gratuit</a></div>
+      <p>Une question par section, chacune reliée au passage dont elle vient. Vous remettez le questionnaire vous-même, sur papier ou dans votre outil : nous ne voyons aucune réponse.</p>
       <p class="small muted">Vente aux organismes immatriculés en France (SIREN). TVA non applicable, art. 293 B du CGI. Déjà client d’<a href="${ACQUIMETRE_URL}">Acquimètre</a> : ${eur(acq)}.</p>
     </div>
-    <figure class="apercu"><a href="exemple/1-questionnaire-de-lecture.pdf" data-mesure="free_download" data-cta><img src="apercu-questionnaire.png" width="420" height="594" alt="Page 1 du questionnaire de l’exemple : en-tête à remplir, puis les premières questions sur l’affichage obligatoire relatif au harcèlement sexuel"></a><figcaption class="small muted">Page 1 du questionnaire de l’exemple, tel que livré.</figcaption></figure>
+    <figure class="apercu"><a href="exemple/1-questionnaire-de-lecture.pdf" data-mesure="sample_click" data-cta><img src="apercu-questionnaire.png" width="420" height="594" alt="Page 1 du questionnaire de l’exemple : en-tête à remplir, puis les premières questions sur l’affichage obligatoire relatif au harcèlement sexuel"></a><figcaption class="small muted">Page 1 du questionnaire de l’exemple, tel que livré.</figcaption></figure>
     ${heroExcerpt()}
   </div>
 </section>
@@ -135,10 +136,10 @@ export function homeBody(p) {
     <h2>L’exemple, sur deux modèles officiels du ministère du Travail</h2>
     <p>Pour vous montrer le résultat sans publier le document d’un client, nous avons traité deux modèles que le Code du travail numérique met à disposition : l’affichage obligatoire sur le harcèlement sexuel et le document unique d’informations remis au salarié à l’embauche. ${sample.questions} questions pour 2 documents et ${sample.sections} sections. Tous les contrôles automatiques sont passés.</p>
     <ul class="dl">
-      <li><a href="exemple/${sample.zip}" data-mesure="free_download" data-cta>Archive complète (ZIP, ${sample.zipKb} Ko)</a> <span class="muted small">${sample.files} fichiers : DOCX, PDF, XLSX, CSV, GIFT</span></li>
-      <li><a href="exemple/1-questionnaire-de-lecture.pdf" data-mesure="free_download" data-cta>Questionnaire de lecture (PDF)</a></li>
-      <li><a href="exemple/2-corrige-et-passages-cites.pdf" data-mesure="free_download" data-cta>Corrigé et passages cités (PDF)</a></li>
-      <li><a href="exemple/3-attestation-lecture-comprehension.pdf" data-mesure="free_download" data-cta>Attestation de lecture et de compréhension (PDF)</a></li>
+      <li><a href="exemple/${sample.zip}" data-mesure="sample_download" data-cta>Archive complète (ZIP, ${sample.zipKb} Ko)</a> <span class="muted small">${sample.files} fichiers : DOCX, PDF, XLSX, CSV, GIFT</span></li>
+      <li><a href="exemple/1-questionnaire-de-lecture.pdf" data-mesure="sample_download" data-cta>Questionnaire de lecture (PDF)</a></li>
+      <li><a href="exemple/2-corrige-et-passages-cites.pdf" data-mesure="sample_download" data-cta>Corrigé et passages cités (PDF)</a></li>
+      <li><a href="exemple/3-attestation-lecture-comprehension.pdf" data-mesure="sample_download" data-cta>Attestation de lecture et de compréhension (PDF)</a></li>
       ${SAMPLE_SOURCES.map((s) => `<li><a href="exemple/${s.file}.pdf">Document source : ${s.title.replace('Modèle – ', '')} (PDF)</a></li>`).join('\n      ')}
     </ul>
     <p class="small muted">Sources : ministère du Travail, Code du travail numérique, ${SAMPLE_SOURCES.map((s) => `« ${ext(s.url, s.title)} » (mis à jour le ${s.updated})`).join(' et ')}, téléchargés le 14/10/2026, réutilisés sous ${ext(ETALAB, 'Licence Ouverte etalab 2.0')}. Les modèles sont reproduits sans modification, convertis en PDF ; les questions, le corrigé et l’attestation sont de READ FRANCE. Les champs « XX » des modèles ne donnent pas lieu à des questions : sur votre document rempli, nous interrogeons aussi vos propres règles (horaires, délais, contacts).</p>
@@ -213,9 +214,9 @@ export function commanderBody(p) {
 <h1 id="commander-h">Commander un questionnaire Lu et Retenu</h1>
 <p>Questionnaire de lecture, corrigé, attestation et registre, rédigés à partir de 1 à 3 de vos documents (60 pages en tout). Vente réservée aux professionnels (SIREN obligatoire). Après le paiement, vous recevez la facture et le lien d’envoi de vos documents ; la livraison a lieu sous 5 jours ouvrés après votre envoi complet.</p>
 <div class="recap card" data-section="recap">
-  <a class="recap-img" href="exemple/1-questionnaire-de-lecture.pdf" target="_blank" rel="noopener" data-mesure="free_download"><img src="apercu-questionnaire.png" width="120" height="170" alt="Page 1 du questionnaire de l’exemple" loading="lazy"></a>
+  <a class="recap-img" href="exemple/1-questionnaire-de-lecture.pdf" target="_blank" rel="noopener" data-mesure="sample_download"><img src="apercu-questionnaire.png" width="120" height="170" alt="Page 1 du questionnaire de l’exemple" loading="lazy"></a>
   <div>
-    <p><strong>Ce que vous recevez par e-mail</strong>, en une archive ZIP : questionnaire de lecture et corrigé avec passages cités (DOCX et PDF), attestation de lecture à faire signer, registre (XLSX et CSV), questions pour Google Forms ou Moodle, modèle de note d’information. <a href="exemple/1-questionnaire-de-lecture.pdf" target="_blank" rel="noopener" data-mesure="free_download">Voir le questionnaire de l’exemple (PDF)</a>.</p>
+    <p><strong>Ce que vous recevez par e-mail</strong>, en une archive ZIP : questionnaire de lecture et corrigé avec passages cités (DOCX et PDF), attestation de lecture à faire signer, registre (XLSX et CSV), questions pour Google Forms ou Moodle, modèle de note d’information. <a href="exemple/1-questionnaire-de-lecture.pdf" target="_blank" rel="noopener" data-mesure="sample_download">Voir le questionnaire de l’exemple (PDF)</a>.</p>
     <p class="small muted"><strong>Ce que vous envoyez ensuite</strong> : 1 à 3 documents en PDF, DOCX ou PPTX, avec du texte sélectionnable et sans noms de salariés ni de stagiaires. Les questions sont rédigées par Octave, l’assistant IA de READ FRANCE, contrôlées par programme, puis relues par vous. <a href="${ABOUT_URL}">Qui fait ce site, et comment</a>.</p>
   </div>
 </div>
