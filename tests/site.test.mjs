@@ -66,12 +66,61 @@ test('tracking: mesure.js = the octave-checkout master with the site id fixed to
   assert.match(ours, /v:2/);
   assert.match(ours, /octave_notrack/);
   assert.equal(ours.split('\n').length, master.split('\n').length);
-  assert.equal(ours.replace("site:'lu-et-retenu'", '').replace(/^\/\*![^\n]*\n/, ''), master.replace(/site:\/\^\([^)]*\)\/\.test\(g\)\?g:'hub'/, '').replace(/^\/\*![^\n]*\n/, ''));
+  // Since 2026-10-16 the master also maps the jalonel.com subdomains to their site ids; this copy only runs on
+  // outils.vread.fr with a fixed id, so those parts are taken out before comparing.
+  const norm = (js) => js.replace(/^\/\*![^\n]*\n/, '')
+    .replace(/H=l\.hostname,J=\{[^}]*\}\[H\.replace\([^)]*\)\],/, '')
+    .replace("H!='outils.vread.fr'&&!J", "l.hostname!='outils.vread.fr'")
+    .replace(/site:J\|\|\(\/\^\([^)]*\)\/\.test\(g\)\?g:'hub'\)/, '')
+    .replace(/site:\/\^\([^)]*\)\/\.test\(g\)\?g:'hub'/, '')
+    .replace("site:'lu-et-retenu'", '');
+  assert.equal(norm(ours), norm(master));
   assert.equal(read(join(DOCS, 'cro.js')), read(join(GAS_WEB, 'cro.js')));
   const index = read(join(DOCS, 'index.html'));
   assert.ok(index.indexOf('src="xp.js"') < index.indexOf('src="cro.js"'), 'xp.js before cro.js');
   assert.match(index, /<script src="cro\.js" data-site="lu-et-retenu" data-api="https:\/\/script\.google\.com\/macros\/s\/AKfycbzD1IRL8Q[^"]+\/exec" data-hosts="outils\.vread\.fr"/);
   assert.match(read(join(DOCS, 'xp.js')), /id: 'ler-prix',\s*variants: \['p149', 'p199'\],\s*mode: 'day',\s*tz: 'Europe\/Paris'/);
+});
+
+test('pooled test POOLED-READING-01: rd-hero (a/b by tab, home only) in OCTAVE_XP; excerpt hidden unless b; sample goal', () => {
+  const g = {};
+  new Function('window', read(join(DOCS, 'xp.js')))(g);
+  const xp = g.OCTAVE_XP.find((e) => e.id === 'rd-hero');
+  assert.deepEqual([xp.variants, xp.mode, xp.param], [['a', 'b'], 'tab', 'hero']);
+  const re = new RegExp(xp.pages);
+  assert.ok(re.test('/lu-et-retenu/') && re.test('/lu-et-retenu/index.html') && !re.test('/lu-et-retenu/commander.html'));
+  assert.ok(g.OCTAVE_XP.find((e) => e.id === 'ler-prix'), 'ler-prix untouched');
+  const css = read(join(DOCS, 'styles.css'));
+  assert.match(css, /\[data-hero-excerpt\]\{display:none\}/);
+  assert.match(css, /html\[data-xp-rd-hero="b"\] \[data-hero-excerpt\]\{display:block\}/);
+  const html = read(join(DOCS, 'index.html'));
+  const fig = html.match(/<figure class="hero-excerpt" data-hero-excerpt>[\s\S]*?<\/figure>/)[0];
+  assert.ok(html.indexOf('class="apercu"') < html.indexOf('data-hero-excerpt') && html.indexOf('data-hero-excerpt') < html.indexOf('id="en-bref"'), 'excerpt inside the hero');
+  assert.match(css, /html\[data-xp-rd-hero="b"\] \.hero \.apercu\{display:none\}/);
+  assert.match(fig, /href="exemple\/1-questionnaire-de-lecture\.pdf" data-mesure="free_download" data-cta/);
+  // The excerpt is verbatim from the sample's answer key.
+  assert.match(fig, /même en l'absence de concertation, savent que ces propos ou comportements caractérisent une répétition/);
+  assert.match(read(join(DOCS, 'cro-goals.js')), /goal\('sample'\)/);
+  assert.match(html, /data-cta="\[data-cta\],/);
+});
+
+test('SEO: FAQPage = visible FAQ (1:1), breadcrumbs on inner pages, about link, sitemap lastmod are real dates', () => {
+  const html = read(join(DOCS, 'index.html'));
+  const faq = ld(html).find((j) => j['@type'] === 'FAQPage');
+  const visible = [...html.matchAll(/<details id="q-[^"]+"><summary>([\s\S]*?)<\/summary>/g)].map((m) => m[1].replace(/\u202f|\u00a0/g, ' '));
+  assert.deepEqual(faq.mainEntity.map((q) => q.name), visible);
+  assert.ok(ld(html).some((j) => j['@type'] === 'BreadcrumbList'));
+  for (const f of ['cgv-pro.html', 'mentions-legales.html', 'confidentialite.html']) {
+    const p = read(join(DOCS, f));
+    assert.match(p, /<nav class="crumbs wrap" aria-label="Fil d’Ariane"><a href="https:\/\/outils\.vread\.fr\/">outils\.vread\.fr<\/a>/, f);
+    assert.equal(ld(p).find((j) => j['@type'] === 'BreadcrumbList').itemListElement.length, 3, f);
+    assert.match(p, /href="https:\/\/outils\.vread\.fr\/a-propos\/">Qui fait ce site, et comment/, f);
+  }
+  const titles = readdirSync(DOCS).filter((f) => f.endsWith('.html')).map((f) => read(join(DOCS, f)).match(/<title>([^<]*)/)[1]);
+  assert.equal(new Set(titles).size, titles.length, 'unique titles');
+  const sm = read(join(DOCS, 'sitemap.xml'));
+  for (const [, d] of sm.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) assert.match(d, /^2026-\d\d-\d\d$/);
+  assert.doesNotMatch(sm, /commander|commande\.html|envoyer|404/);
 });
 
 test('open build: commander (products, extra fields, A/B swap before pay.js, CSP), commande, envoyer (3 documents); checkout config = catalog prices', () => {

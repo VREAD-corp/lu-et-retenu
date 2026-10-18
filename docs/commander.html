@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="styles.css">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://js.stripe.com https://*.js.stripe.com; frame-src https://js.stripe.com https://*.js.stripe.com https://hooks.stripe.com https://link.com https://*.link.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://api.stripe.com https://link.com https://*.link.com; img-src 'self' data: https://*.stripe.com https://*.link.com; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <script src="xp.js"></script>
-<script src="cro.js" data-site="lu-et-retenu" data-api="https://script.google.com/macros/s/AKfycbzD1IRL8QALluKGZxgGiORFP6-DkC_qFJYR9aOxZiimxa06nbCqpzUI-9iLblp6V2VY/exec" data-hosts="outils.vread.fr" data-cta="a[href*='commander'],#pay-button,#upload-done"></script>
+<script src="cro.js" data-site="lu-et-retenu" data-api="https://script.google.com/macros/s/AKfycbzD1IRL8QALluKGZxgGiORFP6-DkC_qFJYR9aOxZiimxa06nbCqpzUI-9iLblp6V2VY/exec" data-hosts="outils.vread.fr" data-cta="[data-cta],a[href*='commander'],#pay-button,#upload-done"></script>
 <script src="mesure.js" defer></script>
 <script src="cro-goals.js" defer></script>
 
@@ -26,13 +26,20 @@
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="./"><img src="favicon.svg" width="28" height="28" alt="">Lu et Retenu<span class="endorse">par READ FRANCE</span></a>
-  <nav class="main" aria-label="Navigation principale"><a href="./#exemple">Exemple</a><a href="./#prix">Prix</a><a href="./#questions">Questions</a><a href="commander.html">Commander</a></nav>
+  <nav class="main" aria-label="Navigation principale"><a href="./">← Retour à l’offre</a></nav>
 </div></header>
 <main id="main">
 <section class="wrap" aria-labelledby="commander-h">
 <h1 id="commander-h">Commander un questionnaire Lu et Retenu</h1>
 <p>Questionnaire de lecture, corrigé, attestation et registre, rédigés à partir de 1 à 3 de vos documents (60 pages en tout). Vente réservée aux professionnels (SIREN obligatoire). Après le paiement, vous recevez la facture et le lien d’envoi de vos documents ; la livraison a lieu sous 5 jours ouvrés après votre envoi complet.</p>
-<form id="octave-pay" class="checkout-form card" novalidate>
+<div class="recap card" data-section="recap">
+  <a class="recap-img" href="exemple/1-questionnaire-de-lecture.pdf" target="_blank" rel="noopener" data-mesure="free_download"><img src="apercu-questionnaire.png" width="120" height="170" alt="Page 1 du questionnaire de l’exemple" loading="lazy"></a>
+  <div>
+    <p><strong>Ce que vous recevez par e-mail</strong>, en une archive ZIP : questionnaire de lecture et corrigé avec passages cités (DOCX et PDF), attestation de lecture à faire signer, registre (XLSX et CSV), questions pour Google Forms ou Moodle, modèle de note d’information. <a href="exemple/1-questionnaire-de-lecture.pdf" target="_blank" rel="noopener" data-mesure="free_download">Voir le questionnaire de l’exemple (PDF)</a>.</p>
+    <p class="small muted"><strong>Ce que vous envoyez ensuite</strong> : 1 à 3 documents en PDF, DOCX ou PPTX, avec du texte sélectionnable et sans noms de salariés ni de stagiaires. Les questions sont rédigées par Octave, l’assistant IA de READ FRANCE, contrôlées par programme, puis relues par vous. <a href="https://outils.vread.fr/a-propos/">Qui fait ce site, et comment</a>.</p>
+  </div>
+</div>
+<form id="octave-pay" class="checkout-form card" data-section="paiement" novalidate>
   <fieldset class="field-group"><legend>Tarif</legend>
     <label class="offer-choice"><input type="radio" name="product" value="lu-et-retenu-149" checked><span><strong>Tarif standard</strong> : <span data-price-for="lu-et-retenu-149">149 € net (TVA non applicable, art. 293 B du CGI)</span></span></label>
     <label class="offer-choice"><input type="radio" name="product" value="lu-et-retenu-acquimetre-59"><span><strong>Clients d’Acquimètre</strong> : <span data-price-for="lu-et-retenu-acquimetre-59">59 € net (TVA non applicable, art. 293 B du CGI)</span></span></label>
@@ -71,14 +78,21 @@
   <div id="payment-element"></div>
   <p id="pay-error" class="status err" role="alert" hidden></p>
   <button type="submit" id="pay-button" class="pay-button" disabled>Payer 149 € et recevoir le lien d’envoi</button>
+  <p class="guarantee small"><strong>Si nous sommes en retard :</strong> archive non livrée 10 jours ouvrés après votre envoi complet, remboursement intégral sur simple demande (CGV, article 6). <strong>Si une question est fausse ou ambiguë :</strong> signalez-la dans les 30 jours, nous la remplaçons sans frais (article 10). Vente entre professionnels : pas de droit de rétractation (article 8).</p>
   <p class="small muted">Paiement sécurisé par carte bancaire avec Stripe : vos données de carte sont saisies dans un cadre Stripe et ne transitent pas par nos serveurs.</p>
   <noscript><p class="status err">Le paiement nécessite JavaScript.</p></noscript>
 </form>
+<div class="before-pay" data-section="questions-commande">
+  <h2>Avant de payer</h2>
+  <details id="c-q-documents"><summary>Quels documents pouvez-vous traiter ?</summary><p>Tout document que vous remettez à l’arrivée d’une personne : règlement intérieur des stagiaires ou du personnel, livret d’accueil (stagiaire, salarié, intérimaire), consignes de sécurité, procédure incendie, charte informatique. Le texte doit être sélectionnable : un PDF issu de Word ou un DOCX, pas une photo.</p></details>
+  <details id="c-q-modifier"><summary>Pouvons-nous modifier les questions et les réutiliser ?</summary><p>Oui. Les DOCX, le registre et les fichiers pour votre outil vous appartiennent pour votre usage interne, pour la durée des droits, à remettre à tous vos salariés, stagiaires et intervenants : modifiez, retirez, ajoutez (CGV, article 9). Seule la revente à des tiers est exclue. Si vous changez de règlement, une nouvelle commande reprend la nouvelle version.</p></details>
+  <details id="c-q-facture"><summary>Faites-vous un devis ? Peut-on payer par virement ?</summary><p>Le paiement se fait par carte bancaire uniquement, au comptant (CGV, article 5) : pas de virement ni de bon de commande pour l’instant. La facture acquittée, à votre raison sociale et à votre SIREN, arrive par e-mail dès le paiement. Si votre service achats demande un devis avant de payer, écrivez à <a href="mailto:octave@vread.fr">octave@vread.fr</a>.</p></details>
+</div>
 </section>
 </main>
 <footer class="foot"><div class="wrap">
   <p><strong>Lu et Retenu, par READ FRANCE</strong> : questionnaires de lecture tirés de vos documents d’accueil, une activité de READ FRANCE, l’éditeur de Vread. READ FRANCE SAS (SIREN 988 741 773), 11 rue Rouvet, 75019 Paris. Contact : <a href="mailto:octave@vread.fr">octave@vread.fr</a>.</p>
-  <p class="foot-links"><a href="mentions-legales.html">Mentions légales</a><a href="cgv-pro.html">CGV professionnels</a><a href="confidentialite.html">Confidentialité</a><a href="https://outils.vread.fr/acquimetre/">Acquimètre</a></p>
+  <p class="foot-links"><a href="mentions-legales.html">Mentions légales</a><a href="cgv-pro.html">CGV professionnels</a><a href="confidentialite.html">Confidentialité</a><a href="https://outils.vread.fr/acquimetre/">Acquimètre</a><a href="https://outils.vread.fr/a-propos/">Qui fait ce site, et comment</a></p>
   <p class="small">Ce service ne donne pas de conseil juridique. Les textes de loi cités sont ceux du Code du travail numérique (code.travail.gouv.fr), consultés le 14 octobre 2026.</p>
 </div></footer>
 <script src="checkout/checkout-config.js"></script>

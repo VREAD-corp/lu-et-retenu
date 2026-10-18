@@ -1,4 +1,5 @@
-/* Objectifs de conversion pour cro.js : téléchargement de l'exemple (liens data-mesure="free_download") -> 'download' ;
+/* Objectifs de conversion pour cro.js : téléchargement de l'exemple (liens data-mesure="free_download") -> 'download'
+ * et 'sample' (même clic, nom commun aux 7 sites de lecture pour le test mutualisé POOLED-READING-01) ;
  * envoi du formulaire de commande (#octave-pay) -> 'checkout' ; envoi des supports terminé (bouton « J'ai tout envoyé »)
  * -> 'intake'. Aucune donnée saisie n'est lue. */
 (function (d) {
@@ -6,7 +7,7 @@
   function goal(name) { if (window.octaveCro) window.octaveCro.goal(name); }
   d.addEventListener('click', function (e) {
     var t = e.target && e.target.closest;
-    if (t && e.target.closest('[data-mesure="free_download"]')) goal('download');
+    if (t && e.target.closest('[data-mesure="free_download"]')) { goal('download'); goal('sample'); }
     if (t && e.target.closest('#upload-done')) goal('intake');
   }, true);
   d.addEventListener('submit', function (e) { if (e.target && e.target.id === 'octave-pay') goal('checkout'); }, true);

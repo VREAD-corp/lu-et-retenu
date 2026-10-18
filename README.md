@@ -69,7 +69,10 @@ la relation de travail délivrées au salarié » (updated 09/07/2024). 16 quest
 
 `mesure.js` = the octave-checkout master (v:2, bot/webdriver filtering, `?octave_notrack=1`) with the site id fixed to
 `lu-et-retenu`; `cro.js` byte-identical; A/B `ler-prix` (`site/assets/xp.js`, `commander-xp.js` swaps the radio before
-pay.js); goals `download`, `checkout`, `intake` (`cro-goals.js`). The site, the experiment and the goal must be
+pay.js); goals `download`, `sample` (same click, the name shared by the 7 reading sites), `checkout`, `intake` (`cro-goals.js`).
+Pooled test **POOLED-READING-01** (`rd-hero`, by tab, home only, `?hero=b`): variant b shows a verbatim excerpt of the
+free sample (question 2 and its answer-key line) in place of the page-1 thumbnail; analysed across the 7 reading sites in
+`vread-revenue-lab` (`octave-asset-ventures/experiments/POOLED-READING-01.md`). Primary CTAs and sample links carry `data-cta`. The site, the experiment and the goal must be
 whitelisted in octave-checkout (`TRACK_SITES_`, `PAID_PAGE_`, `CRO_EXPERIMENTS_`, `CRO_GOALS_`).
 
 ## Tests
